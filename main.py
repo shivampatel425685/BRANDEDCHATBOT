@@ -131,13 +131,13 @@ async def restart(client, m: Message):
         accha = await m.reply_text(
                         text = f"{g}")
         await asyncio.sleep(1)
-        await accha.edit("┣★ 𝐎𝐖𝐍𝐄𝐑 [𝐁𝐑𝐀𝐍𝐃𝐄𝐃](https://t.me/BRANDEDADITY82)")
+        await accha.edit("🦋𝗡𝗢𝗪 𝗖𝗢𝗠𝗘 𝗛𝗘𝗥𝗘 👉 @BRANDED_WORLD , @BRANDRD_BOT , @BRANDED_PAID_CC 𝗔𝗡𝗗 𝗠𝗔𝗞𝗘 𝗬𝗢𝗨𝗥 𝗚𝗜𝗥𝗟𝗙𝗥𝗜𝗡𝗗 🥀 𝗜𝗙 𝗬𝗢 𝗛𝗔𝗩𝗘 𝗔 𝗚𝗜𝗥𝗟𝗙𝗜𝗘𝗡𝗗  😘 𝗧𝗛𝗘𝗡 𝗬𝗢𝗨 𝗪𝗜𝗟𝗟 𝗚𝗜𝗙𝗧 🙊 𝗧𝗢 𝗠𝗬 𝗢𝗪𝗡𝗘𝗥 @BRANDEDKING8 ❤️")
         await asyncio.sleep(0.5)
-        await accha.edit("┣★ 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 [𝐂𝐇𝐀𝐍𝐍𝐄𝐋](https://t.me/BRANDRD_BOT)")
+        await accha.edit("🦋𝗡𝗢𝗪 𝗖𝗢𝗠𝗘 𝗛𝗘𝗥𝗘 👉 @BRANDED_WORLD , @BRANDRD_BOT , @BRANDED_PAID_CC 𝗔𝗡𝗗 𝗠𝗔𝗞𝗘 𝗬𝗢𝗨𝗥 𝗚𝗜𝗥𝗟𝗙𝗥𝗜𝗡𝗗 🥀 𝗜𝗙 𝗬𝗢 𝗛𝗔𝗩𝗘 𝗔 𝗚𝗜𝗥𝗟𝗙𝗜𝗘𝗡𝗗  😘 𝗧𝗛𝗘𝗡 𝗬𝗢𝗨 𝗪𝗜𝗟𝗟 𝗚𝗜𝗙𝗧 🙊 𝗧𝗢 𝗠𝗬 𝗢𝗪𝗡𝗘𝗥 @BRANDEDKING8 ❤️")
         await asyncio.sleep(0.5)
-        await accha.edit("┣★ 𝐒𝐔𝐏𝐏𝐎𝐑𝐓 [𝐆𝐑𝐎𝐔𝐏](https://t.me/BRANDED_WORLD)")
+        await accha.edit("🦋𝗡𝗢𝗪 𝗖𝗢𝗠𝗘 𝗛𝗘𝗥𝗘 👉 @BRANDED_WORLD , @BRANDRD_BOT , @BRANDED_PAID_CC 𝗔𝗡𝗗 𝗠𝗔𝗞𝗘 𝗬𝗢𝗨𝗥 𝗚𝗜𝗥𝗟𝗙𝗥𝗜𝗡𝗗 🥀 𝗜𝗙 𝗬𝗢 𝗛𝗔𝗩𝗘 𝗔 𝗚𝗜𝗥𝗟𝗙𝗜𝗘𝗡𝗗  😘 𝗧𝗛𝗘𝗡 𝗬𝗢𝗨 𝗪𝗜𝗟𝗟 𝗚𝗜𝗙𝗧 🙊 𝗧𝗢 𝗠𝗬 𝗢𝗪𝗡𝗘𝗥 @BRANDEDKING8 ❤️")
         await asyncio.sleep(0.5)
-        await accha.delete("┣★ 𝐇𝐄𝐑𝐎𝐊𝐔 [𝐂𝐂](https://t.me/BRANDED_PAID_CC)")
+        await accha.delete("🦋𝗡𝗢𝗪 𝗖𝗢𝗠𝗘 𝗛𝗘𝗥𝗘 👉 @BRANDED_WORLD , @BRANDRD_BOT , @BRANDED_PAID_CC 𝗔𝗡𝗗 𝗠𝗔𝗞𝗘 𝗬𝗢𝗨𝗥 𝗚𝗜𝗥𝗟𝗙𝗥𝗜𝗡𝗗 🥀 𝗜𝗙 𝗬𝗢 𝗛𝗔𝗩𝗘 𝗔 𝗚𝗜𝗥𝗟𝗙𝗜𝗘𝗡𝗗  😘 𝗧𝗛𝗘𝗡 𝗬𝗢𝗨 𝗪𝗜𝗟𝗟 𝗚𝗜𝗙𝗧 🙊 𝗧𝗢 𝗠𝗬 𝗢𝗪𝗡𝗘𝗥 @BRANDEDKING8 ❤️")
         umm = await m.reply_sticker(
                   sticker = STKR,
         )
