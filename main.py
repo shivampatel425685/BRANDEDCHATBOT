@@ -44,7 +44,7 @@ async def start(client, message):
                    InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/BRANDED_WORLD"),
                   ]       
                   ]
-        await message.reply("ᴄᴏɴᴛᴀᴄᴛ ᴍᴇ ɪɴ ᴘᴇʀsᴏɴᴀʟ", reply_markup=buttons)
+        
         
     else:
         buttons = [[
