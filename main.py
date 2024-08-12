@@ -32,36 +32,127 @@ BRANDEDCHAT = Client(
     api_hash = API_HASH ,
     bot_token = BOT_TOKEN
 )
+START =f"""
+**๏ ʜᴇʏ, ɪ ᴀᴍ {BOT_NAME}**
+**➻ᴀɴ ᴀɪ-ʙᴀsᴇᴅ ᴄʜᴀᴛʙᴏᴛ.**
+**──────────────────**
+**➻ ᴜsᴀɢᴇ /chatbot [on/off]**
+**๏ ᴛᴏ ɢᴇᴛ ʜᴇʟᴘ ᴜsᴇ /help**
+"""
+SOURCE_TEXT = f"""
+**๏ ʜᴇʏ, ɪ ᴀᴍ [{BOT_NAME}]
+➻ ᴀɴ ᴀɪ-ʙᴀsᴇᴅ ᴄʜᴀᴛʙᴏᴛ.
+──────────────────
+ᴄʟɪᴄᴋ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ᴛʜᴇ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ**
+"""
+SOURCE_BUTTONS = InlineKeyboardMarkup([[InlineKeyboardButton('sᴏᴜʀᴄᴇ', callback_data='hurr')], [InlineKeyboardButton(" ꜱᴜᴘᴘᴏʀᴛ ", url=f"https://t.me/{SUPPORT_GRP}"), InlineKeyboardButton(text="ʙᴀᴄᴋ ", callback_data="HELP_BACK")]])
+SOURCE = 'https://github.com/WCGKING/BRANDEDCHATBOT'
+x=["❤️","🎉","✨","🪸","🎉","🎈","💸"]
+g=choice(x)
+async def is_admins(chat_id: int):
+    return [
+        member.user.id
+        async for member in BRANDEDCHAT.get_chat_members(
+            chat_id, filter=enums.ChatMembersFilter.ADMINISTRATORS
+        )
+    ]
 
-@BRANDEDCHAT.on_message(filters.command("start"))
-async def start(client, message):
-    self = await BRANDEDCHAT.get_me()
-    busername = self.username
-    if message.chat.type != "private":
-        buttons = [
-                  [
-                   InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇs", url="https://t.me/BRANDRD_BOT"),
-                   InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/BRANDED_WORLD"),
-                  ]       
-                  ]
-        
-        
-    else:
-        buttons = [[
-            InlineKeyboardButton("❮ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ❯", url=f"https://t.me/VickMachine82_Bot?startgroup=true")
-        ]
-        ]
-        video = "https://graph.org/file/e999c40cb700e7c684b75.mp4"
-        await message.reply_video(video, caption=f"""ʜᴇʟʟᴏ[{message.from_user.first_name}](tg://user?id={message.from_user.id}),
-ɪ ᴀᴍ ᴄʜᴀᴛʙᴏᴛ ғᴏʀ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴘs ...
+MAIN = [
+    [
+        InlineKeyboardButton(text="ᴅᴇᴠᴇʟᴏᴘᴇʀ", url=f"https://t.me/{OWNER_USERNAME}"),
+        InlineKeyboardButton(text=" ꜱᴜᴘᴘᴏʀᴛ ", url=f"https://t.me/{SUPPORT_GRP}"),
+    ],
+    [
+        InlineKeyboardButton(
+            text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ",
+            url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
+        ),
+    ],
+    [
+        InlineKeyboardButton(text="ʜᴇʟᴘ & ᴄᴍᴅs ", callback_data="HELP"),
+    ],
+    [
+        InlineKeyboardButton(text="sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", callback_data='source'),
+        InlineKeyboardButton(text=" ᴜᴘᴅᴀᴛᴇs ", url=f"https://t.me/{UPDATE_CHNL}"),
+    ],
+]
+PNG_BTN = [
+    [
+         InlineKeyboardButton(
+             text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ",
+             url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
+         ),
+     ],
+     [
+         InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", 
+                              url=f"https://t.me/{SUPPORT_GRP}",
+         ),
+     ],
+]
 
-┏━━━━━━━━━━━━━━━━━┓
-┣★ 𝐎𝐖𝐍𝐄𝐑   [𝐀𝐃𝐈𝐓𝐘𝐀](https://t.me/BRANDEDKING8)
+HELP_READ = "**ᴜsᴀɢᴇ ☟︎︎︎**\n**➻ ᴜsᴇ** `/chatbot on` **ᴛᴏ ᴇɴᴀʙʟᴇ ᴄʜᴀᴛʙᴏᴛ.**\n**➻ ᴜsᴇ** `/chatbot off` **ᴛᴏ ᴅɪsᴀʙʟᴇ ᴛʜᴇ ᴄʜᴀᴛʙᴏᴛ.**\n**๏ ɴᴏᴛᴇ ➻ ʙᴏᴛʜ ᴛʜᴇ ᴀʙᴏᴠᴇ ᴄᴏᴍᴍᴀɴᴅs ғᴏʀ ᴄʜᴀᴛ-ʙᴏᴛ ᴏɴ/ᴏғғ ᴡᴏʀᴋ ɪɴ ɢʀᴏᴜᴘ ᴏɴʟʏ!!**\n\n**➻ ᴜsᴇ** `/ping` **ᴛᴏ ᴄʜᴇᴄᴋ ᴛʜᴇ ᴘɪɴɢ ᴏғ ᴛʜᴇ ʙᴏᴛ.**\n||©️ @BRANDRD_BOT||"
+HELP_BACK = [
+     
+    [
+           InlineKeyboardButton(text="ʙᴀᴄᴋ ", callback_data="HELP_BACK"),
+    ]
+]
+@BRANDEDCHAT.on_message(filters.incoming & filters.private, group=-1)
+async def must_join_channel(bot: Client, msg: Message):
+    if not UPDATE_CHNL:
+        return
+    try:
+        try:
+            await bot.get_chat_member(UPDATE_CHNL, msg.from_user.id)
+        except UserNotParticipant:
+            if UPDATE_CHNL.isalpha():
+                link = "https://t.me/" + UPDATE_CHNL
+            else:
+                chat_info = await bot.get_chat(UPDATE_CHNL)
+                link = chat_info.invite_link
+            try:
+                await msg.reply_photo(
+                    photo=START_IMG, caption=f"» ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ ʏᴏᴜ'ᴠᴇ ɴᴏᴛ ᴊᴏɪɴᴇᴅ [ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ]({link}) ʏᴇᴛ, ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴜsᴇ ᴍᴇ ᴛʜᴇɴ ᴊᴏɪɴ [ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ]({link}) ᴀɴᴅ sᴛᴀʀᴛ ᴍᴇ ᴀɢᴀɪɴ !",
+                    reply_markup=InlineKeyboardMarkup(
+                        [
+                            [
+                                InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ", url=link),
+                            ]
+                        ]
+                    )
+                )
+                await msg.stop_propagation()
+            except ChatWriteForbidden:
+                pass
+    except ChatAdminRequired:
+        print(f"Promote me as an admin in the UPDATE CHANNEL  : {UPDATE_CHNL} !")
+@BRANDEDCHAT.on_message(filters.command(["start",f"start@{BOT_USERNAME}"]))
+async def restart(client, m: Message):
+        accha = await m.reply_text(
+                        text = f"{g}")
+        await asyncio.sleep(1)
+        await accha.edit("┏━━━━━━━━━━━━━━━━━┓
+┣★ 𝐎𝐖𝐍𝐄𝐑   [𝐁𝐑𝐀𝐍𝐃𝐄𝐃](https://t.me/BRANDEDADITY82)
 ┣★ 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 [𝐂𝐇𝐀𝐍𝐍𝐄𝐋](https://t.me/BRANDRD_BOT)
 ┣★ 𝐒𝐔𝐏𝐏𝐎𝐑𝐓 [𝐆𝐑𝐎𝐔𝐏](https://t.me/BRANDED_WORLD)
 ┣★ 𝐒𝐎𝐔𝐑𝐂𝐄  [ 𝐑𝐄𝐏𝐎](https://github.com/WCGKING/BRANDEDCHATBOT)
-┗━━━━━━━━━━━━━━━━━┛
-""", reply_markup=InlineKeyboardMarkup(buttons))
+┗━━━━━━━━━━━━━━━━━┛")
+        await asyncio.sleep(0.5)
+        await accha.edit("")
+        await asyncio.sleep(0.5)
+        await accha.edit("")
+        await asyncio.sleep(0.5)
+        await accha.delete()
+        umm = await m.reply_sticker(
+                  sticker = STKR,
+        )
+        await asyncio.sleep(1)
+        await umm.delete()
+        await m.reply_photo(
+            photo = START_IMG,
+            caption=START,
+            reply_markup=InlineKeyboardMarkup(MAIN),
+        )
 
 
 @BRANDEDCHAT.on_callback_query()
