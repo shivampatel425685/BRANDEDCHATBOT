@@ -33,7 +33,7 @@ BRANDEDCHAT = Client(
     bot_token = BOT_TOKEN
 )
 
-@bot.on_message(filters.command("start"))
+@BRANDEDCHAT.on_message(filters.command("start"))
 async def start(client, message):
     self = await bot.get_me()
     busername = self.username
