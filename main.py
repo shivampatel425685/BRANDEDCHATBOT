@@ -35,7 +35,7 @@ BRANDEDCHAT = Client(
 
 @BRANDEDCHAT.on_message(filters.command("start"))
 async def start(client, message):
-    self = await @BRANDEDCHAT.get_me()
+    self = await BRANDEDCHAT.get_me()
     busername = self.username
     if message.chat.type != "private":
         buttons = [
