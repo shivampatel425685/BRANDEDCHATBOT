@@ -131,12 +131,12 @@ async def restart(client, m: Message):
         accha = await m.reply_text(
                         text = f"{g}")
         await asyncio.sleep(1)
-        await accha.edit("┏━━━━━━━━━━━━━━━━━┓
+        await accha.edit(┏━━━━━━━━━━━━━━━━━┓
 ┣★ 𝐎𝐖𝐍𝐄𝐑   [𝐁𝐑𝐀𝐍𝐃𝐄𝐃](https://t.me/BRANDEDADITY82)
 ┣★ 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 [𝐂𝐇𝐀𝐍𝐍𝐄𝐋](https://t.me/BRANDRD_BOT)
 ┣★ 𝐒𝐔𝐏𝐏𝐎𝐑𝐓 [𝐆𝐑𝐎𝐔𝐏](https://t.me/BRANDED_WORLD)
 ┣★ 𝐒𝐎𝐔𝐑𝐂𝐄  [ 𝐑𝐄𝐏𝐎](https://github.com/WCGKING/BRANDEDCHATBOT)
-┗━━━━━━━━━━━━━━━━━┛")
+┗━━━━━━━━━━━━━━━━━┛)
         await asyncio.sleep(0.5)
         await accha.edit("")
         await asyncio.sleep(0.5)
